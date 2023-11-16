@@ -15,7 +15,7 @@ def index(request):
                 name=name,
                 email=email
             )
-            messages.success(request, "Student added successfully")
+            messages.success(request, "Student Added successfully")
     
         elif "update" in request.POST:
             id = request.POST.get("id")
@@ -25,7 +25,7 @@ def index(request):
             student.name = name
             student.email = email
             student.save()
-            messages.success(request, "student updated successfully")
+            messages.success(request, "student Updated successfully")
     
         elif "delete" in request.POST:
             id = request.POST.get("id")
